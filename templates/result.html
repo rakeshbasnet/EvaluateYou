@@ -1,0 +1,90 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div class="d-flex justify-content-center">
+  <div class="card result-card mt-3">
+    <div class="container">
+      <div id="wrapper">
+        <svg id="meter">
+          <circle
+            id="outline_curves"
+            class="circle outline"
+            cx="50%"
+            cy="50%"
+          ></circle>
+
+          <circle
+            id="low"
+            class="circle range"
+            cx="50%"
+            cy="50%"
+            stroke="#FF0000"
+          ></circle>
+
+          <circle
+            id="avg"
+            class="circle range"
+            cx="50%"
+            cy="50%"
+            stroke="#FF6347"
+          ></circle>
+          <circle
+            id="more-avg"
+            class="circle range"
+            cx="50%"
+            cy="50%"
+            stroke="#FFC300"
+          ></circle>
+
+          <circle
+            id="most-avg"
+            class="circle range"
+            cx="50%"
+            cy="50%"
+            stroke="#FFFF00"
+          ></circle>
+          <circle
+            id="less-high"
+            class="circle range"
+            cx="50%"
+            cy="50%"
+            stroke="#90EE90"
+          ></circle>
+
+          <circle
+            id="high"
+            class="circle range"
+            cx="50%"
+            cy="50%"
+            stroke="#228B22"
+          ></circle>
+
+          <circle id="mask" class="circle" cx="50%" cy="50%"></circle>
+
+          <circle
+            id="outline_ends"
+            class="circle outline"
+            cx="50%"
+            cy="50%"
+          ></circle>
+        </svg>
+        <img
+          id="meter_needle"
+          type="image/svg+xml"
+          src="/static/images/svg+xml/svg-meter-gauge-needle.svg"
+          alt=""
+        />
+      </div>
+      <div id="result-text-wrapper">
+        <p class="result-text animate__animated animate__zoomInDown">
+          Estimated Result: {{final_result}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="static/result.js"></script>
+
+{% endblock %}

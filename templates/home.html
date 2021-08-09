@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="/result" method="post">
+      <div class="main-content">
+        <div class="container">
+          {% include 'general.html' %} 
+          {% include 'family.html' %} 
+          {% include 'privilege.html' %} 
+          {% include 'skills.html' %} 
+          {% include 'school.html' %} 
+          {% include 'marks.html' %}
+        </div>
+      </div>
+      <div class="submit-form-section d-flex justify-content-center">
+        <button type="submit" class="btn submit-button btn-md mt-3 mb-5">
+          Generate Result
+        </button>
+      </div>
+    </form>
+{% endblock %}
+
